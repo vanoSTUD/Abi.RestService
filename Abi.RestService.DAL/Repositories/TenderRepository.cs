@@ -33,7 +33,7 @@ public class TenderRepository : ITenderRepository
 			for (int j = 0; j <= cols; j++)
 			{
 				object value = worksheet.Cells[i, j].Value;
-				SetProperty(newTender, j, value);
+				SetPropertyToTender(newTender, j, value);
 			}
 
 			tenders.Add(newTender);
@@ -42,20 +42,20 @@ public class TenderRepository : ITenderRepository
 		return await Task.FromResult(tenders);
     }
 
-	private void SetProperty(Tender tender, int index, object valueObj)
+	private void SetPropertyToTender(Tender tender, int index, object propertyValueObj)
 	{
 		ArgumentNullException.ThrowIfNull(tender);
-		ArgumentNullException.ThrowIfNull(valueObj);
+		ArgumentNullException.ThrowIfNull(propertyValueObj);
 
 		string tenderPropertyName = ((TenderProperties)index).ToString();
 		PropertyInfo? tenderProperty = typeof(Tender).GetProperty(tenderPropertyName);
 
 		if (tenderProperty == null)
-			throw new InvalidOperationException($"{typeof(Tender)} or {typeof(TenderProperties)} doesn't contain property with index {index}");
+			throw new InvalidOperationException($"{typeof(Tender)} or {typeof(TenderProperties)} doesn't contain property with index '{index}'");
 
 		Type propertyType = tenderProperty.PropertyType;
 
-		object value = Convert.ChangeType(valueObj, propertyType);
-		tenderProperty.SetValue(tender, value, null);
+		propertyValueObj = Convert.ChangeType(propertyValueObj, propertyType);
+		tenderProperty.SetValue(tender, propertyValueObj, null);
 	}
 }

@@ -5,11 +5,17 @@ VisualStudioVersion = 17.10.35004.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Abi.RestService.API", "Abi.RestService.API\Abi.RestService.API.csproj", "{60590DE4-9EC3-4DBD-BEE2-7386911FD64F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abi.RestService.Domain", "Abi.RestService.Domain\Abi.RestService.Domain.csproj", "{BBB2DCF6-CF56-434F-8B4B-00CD42E9EA0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Abi.RestService.Domain", "Abi.RestService.Domain\Abi.RestService.Domain.csproj", "{BBB2DCF6-CF56-434F-8B4B-00CD42E9EA0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abi.RestService.DAL", "Abi.RestService.DAL\Abi.RestService.DAL.csproj", "{9C2B5103-C452-467F-8196-AF7C72A3519A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Abi.RestService.DAL", "Abi.RestService.DAL\Abi.RestService.DAL.csproj", "{9C2B5103-C452-467F-8196-AF7C72A3519A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abi.RestService.Application", "Abi.RestService.Application\Abi.RestService.Application.csproj", "{FB1E0A8B-031C-4AE3-8409-5E2A2788B2F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Abi.RestService.Application", "Abi.RestService.Application\Abi.RestService.Application.csproj", "{FB1E0A8B-031C-4AE3-8409-5E2A2788B2F8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{9BA1FD45-AB26-47B3-91A2-8EB977A8B92A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastracture", "Infrastracture", "{B5D0757D-B9DA-4B2D-BD39-465174F4F29C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{31AA9EDB-942C-485A-B071-EEFAB52AE855}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +42,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{60590DE4-9EC3-4DBD-BEE2-7386911FD64F} = {31AA9EDB-942C-485A-B071-EEFAB52AE855}
+		{BBB2DCF6-CF56-434F-8B4B-00CD42E9EA0B} = {9BA1FD45-AB26-47B3-91A2-8EB977A8B92A}
+		{9C2B5103-C452-467F-8196-AF7C72A3519A} = {B5D0757D-B9DA-4B2D-BD39-465174F4F29C}
+		{FB1E0A8B-031C-4AE3-8409-5E2A2788B2F8} = {9BA1FD45-AB26-47B3-91A2-8EB977A8B92A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {38A0F831-C323-41A2-AD03-F8A26EAC6E49}

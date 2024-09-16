@@ -5,9 +5,9 @@ using Microsoft.Extensions.Options;
 
 namespace Abi.RestService.DAL;
 
-public class XlsContext : IFileContext
+public class XlsFileContext : IFileContext
 {
-	public XlsContext(IOptions<XlsFileOptions> options)
+	public XlsFileContext(IOptions<XlsFileOptions> options)
     {
 		string dataFileName = options.Value.FileName;
 		string currentDirectory = Directory.GetCurrentDirectory();

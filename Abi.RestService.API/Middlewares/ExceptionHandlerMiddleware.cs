@@ -22,7 +22,6 @@ namespace Abi.RestService.API.Middlewares
 			}
 			catch (Exception ex)
 			{
-
 				await HandleExceptionAsync(context, ex);
 			}
 		}

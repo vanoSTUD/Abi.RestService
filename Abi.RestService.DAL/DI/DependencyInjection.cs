@@ -11,7 +11,7 @@ public static class DependencyInjection
 {
 	public static void AddFileContext(this IServiceCollection services)
 	{
-		services.AddScoped<IFileContext, XlsContext>(serviceProvider => new XlsContext(
+		services.AddScoped<IFileContext, XlsFileContext>(serviceProvider => new XlsFileContext(
 			options: serviceProvider.GetRequiredService<IOptions<XlsFileOptions>>()
 		));
 

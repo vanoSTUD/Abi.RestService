@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Serilog" Version="4.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Abi.RestService.DAL\Abi.RestService.DAL.csproj" />
     <ProjectReference Include="..\Abi.RestService.Domain\Abi.RestService.Domain.csproj" />
   </ItemGroup>

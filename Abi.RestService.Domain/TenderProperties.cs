@@ -2,9 +2,8 @@
 
 public enum TenderProperties : int
 {
-	Id = 0,
-	Name = 1,
-	StartDate = 2,
-	EndDate = 3,
-	Url = 4
+	Name = 0,
+	StartDate = 1,
+	EndDate = 2,
+	Url = 3
 }
